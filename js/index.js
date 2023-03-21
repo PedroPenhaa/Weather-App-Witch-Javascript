@@ -15,7 +15,7 @@ search.addEventListener('click', () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then(response => response.json()).then(json => {
 
         if(json.cod == '404'){
-            container.style.height = '50vh';
+            container.style.height = '400px';
             weatherBox.style.display = 'none';
             weatherDetails.style.display = 'none';
             error404.style.display = 'block';
@@ -66,9 +66,9 @@ search.addEventListener('click', () => {
         weatherDetails.style.display = '';
         weatherBox.classList.add('fadeIn');
         weatherDetails.classList.add('fadeIn');
-        container.style.height = '590px';
+        container.style.height = '560px';
     });
 
-
+    
 
 });
